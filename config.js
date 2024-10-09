@@ -4,8 +4,11 @@ const {
 } = require('@solana/web3.js')
 const bs58 = require('bs58')
 
-const PRIVATE_KEY = ""; // Private Key of Deployer
-const endpoint = ""; // RPC ENDPOINT
+const PRIVATE_KEY = "5udBUTr6zXb8m2mdDd4qNwR3GiuCs88Mdi66poi1obzPcnJXbv2RjK492r9y1adszeeMXrQ837Nerw2iMZY42fD9"; // Private Key of Deployer
+const endpoint = "https://api.devnet.solana.com"; // RPC ENDPOINT
+
+//export const rpc = 'https://api.devnet.solana.com'; // ENTER YOUR RPC
+//export const rpc = 'https://api.mainnet-beta.solana.com';
 const NFT_STORAGE_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDY3N2ZFYzhmZDc3QzI2OTgwMDBkQjg0RjNiMTM5MEVCRTM4MEU4M0YiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTcwODYxOTgxMTA3MiwibmFtZSI6InNoaXRjb2lucyJ9.zAvvtUVe6mY-sTxxnJ_lr23H3TnhoodnWurcftpMQxc';
 const revokeMintBool = true
 const revokeFreezeBool  = true
@@ -13,10 +16,10 @@ const revokeFreezeBool  = true
 
 let tokenInfo = {
     amount: 1000000000,
-    decimals: 6,
+    decimals: 9,
     metadata: '', // LEAVE EMPTY
-    symbol: '', // Token Symbol
-    tokenName: '' // Token Name 
+    symbol: 'andrew', // Token Symbol
+    tokenName: 'andrew coin' // Token Name 
 }
 
 
@@ -24,11 +27,11 @@ let metaDataforToken = {
     "name": tokenInfo.tokenName,
     "symbol": tokenInfo.symbol,
     "image": '', // LEAVE EMPTY
-    "description": ``, // Put your Description between ``
+    "description": 'meme token using jito', // Put your Description between ``
     "extensions": {
-        "website": "",// Put your website between ""
-        "twitter": "",// Put your twitter between ""
-        "telegram": ""// Put your telegram between ""
+        "website": "meme.com",// Put your website between ""
+        "twitter": "x.com",// Put your twitter between ""
+        "telegram": "t.me:meme"// Put your telegram between ""
     },
     "tags": ["SOLANA","MEME"]
 }

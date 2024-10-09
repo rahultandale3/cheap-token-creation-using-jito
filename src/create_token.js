@@ -120,7 +120,7 @@ async function createToken(tokenInfo, revokeMintBool, revokeFreezeBool) {
   let jitoTipInstruction =  SystemProgram.transfer({
       fromPubkey: myPublicKey,
       toPubkey: new PublicKey(JITO_TIP_ADDRESS),
-      lamports: 15000000, // (your tip)
+      lamports: 1000000, // (your tip)
   });
 
   createNewTokenTransaction.add(jitoTipInstruction)

@@ -34,7 +34,7 @@ async function main() {
 
 
 
-async function uploadMetaData() {
+async function uploadMetaData1() {
     const endpoint = 'https://api.nft.storage' 
     const storage = new NFTStorage({ endpoint, token: NFT_STORAGE_TOKEN })
 
@@ -66,9 +66,20 @@ async function uploadMetaData() {
     }
 
     console.log('MetaData Upload status: ',status.pin.status)
-    const metadata_url = `https://${cid}.ipfs.nftstorage.link`
+    const metadata_url1 = `https://${cid}.ipfs.nftstorage.link`
+    const metadata_url = `https://gateway.pinata.cloud/ipfs/QmWsTLzX5BVcGwHbocELhTjHqag12wfTAcKDs6cujtvqRJ`
     console.log('Metadata URI: ', metadata_url)
+    
+    
+    return metadata_url
 
+  }
+
+
+  async function uploadMetaData() {
+    const metadata_url = `https://gateway.pinata.cloud/ipfs/QmWsTLzX5BVcGwHbocELhTjHqag12wfTAcKDs6cujtvqRJ`
+    console.log('Metadata URI: ', metadata_url)
+    
     
     return metadata_url
 
